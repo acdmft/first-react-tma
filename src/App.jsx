@@ -3,15 +3,18 @@ import './App.css';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import { useState, useEffect } from 'react'; 
-import { useLaunchParams } from '@telegram-apps/sdk-react';
+// import { useLaunchParams } from '@telegram-apps/sdk-react'; // v. 2.0.9
 // import {  backButton } from '@telegram-apps/sdk-react';
+import { retrieveLaunchParams } from '@telegram-apps/sdk';
 function App() {
   const [groupId, setGroupId] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const launchParams = useLaunchParams();
+  // const launchParams = useLaunchParams();
+  const launchParams = retrieveLaunchParams();
   useEffect(() => {
     const initializeComponent = async () => {
+      console.log('launchParams ', launchParams);
       try {
         if (launchParams?.startParam) {
           const encodedGroupId = launchParams.startParam;
