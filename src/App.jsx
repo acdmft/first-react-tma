@@ -16,8 +16,8 @@ function App() {
     const initializeComponent = async () => {
       console.log('launchParams ', launchParams);
       try {
-        if (launchParams?.startParam) {
-          const encodedGroupId = launchParams.startParam;
+        if (launchParams?.startapp) {
+          const encodedGroupId = launchParams.startapp;
           try {
             const decodedGroupId = atob(encodedGroupId);
             console.log("Decoded Group ID:", decodedGroupId);
