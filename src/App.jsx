@@ -56,7 +56,7 @@ function App() {
     <>
        
       <main className="flex flex-col gap-8">
-      <h1 className="text-2xl font-bold">Task Board - Group {groupId}</h1>
+      <h1 className="text-2xl font-bold text-lime-600">Task Board - Group {groupId}</h1>
         <TaskForm groupId={groupId} />
         <TaskList groupId={groupId} />
       </main>
