@@ -12,6 +12,7 @@ export default function TaskForm({ groupId }) {
         if (!title.trim() || !db) return;
     
         try {
+          console.log('groupId ', groupId);
           await addDoc(collection(db, 'tasks'), {
             title: title.trim(),
             completed: false,
