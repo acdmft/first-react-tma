@@ -1,10 +1,7 @@
-/** @type {import('postcss-load-config').Config} */
-const config = {
+// eslint-disable-next-line no-undef
+module.exports = {
     plugins: {
-
-        tailwindcss: {},
-        autoprefixer: {},
-    }
-};
-  
-export default config;
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  };
